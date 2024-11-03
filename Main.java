@@ -27,6 +27,7 @@ public class Main {
                 System.out.println("\nOriginal array: " + Arrays.toString(numbers));
                 System.out.println("\nAvailable Sorting Algorithms:");
                 System.out.println("1. Bubble Sort");
+                System.out.println("2. Merge Sort");
                 System.out.println("4. Return to main menu");
                 
                 int algorithmChoice = getValidIntInput(scanner, 1, 4);
@@ -44,6 +45,10 @@ public class Main {
                     case 1:
                         SortingAlgorithms.bubbleSort(numbersCopy);
                         displaySortingResults("Bubble Sort", numbersCopy, startTime);
+                        break;
+                    case 2:
+                        SortingAlgorithms.mergeSort(numbersCopy, 0, numbersCopy.length - 1);
+                        displaySortingResults("Merge Sort", numbersCopy, startTime);
                         break;
                     default:
                         System.out.println("Invalid choice. Please try again.");
